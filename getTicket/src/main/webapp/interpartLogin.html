@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>interpartLogin</title>
+</head>
+<body>
+	<div id="container"></div>
+	<input type="text" id="username">
+	<input type="text" id="password">
+	<input type="button" id="submit">
+</body>
+<script type="text/javascript" src="../resources/js/jquery_2.2.4.js"></script>
+<script type="text/javascript">
+	$("#submit").click(function(){
+		//$("#username").val("assddff");
+		//$("#password").val("dfdfsf");
+		$.ajax({
+			dataType: 'html',
+			 //data:{"id":'1806609733@qq.com',"password":'lang@199425728',"certTp":'06'},
+			 url: 'interpartLogin', //请求后台的URL（*）
+			 type: 'post', //请求方式（*）
+			success : function(result) {
+				window.location.href="http://www.globalinterpark.com/detail/edetail?prdNo=18005170&dispNo=01011"; 
+				$("#container").html(result);
+			},
+			error : function(errorMsg) {
+			    
+			}
+		});
+	})
+	$(function(){
+		//$("#username").val("assddff");
+		//$("#password").val("dfdfsf");
+		$.ajax({
+			dataType: 'html',
+			 //data:{"id":'1806609733@qq.com',"password":'lang@199425728',"certTp":'06'},
+			 url: 'interpartLogin', //请求后台的URL（*）
+			 type: 'post', //请求方式（*）
+			success : function(result) {
+				window.location.href="https://www.globalinterpark.com"; 
+				$("#container").html(result);
+			},
+			error : function(errorMsg) {
+			    
+			}
+		});
+	})
+	
+</script>
+</html>
